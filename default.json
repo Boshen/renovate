@@ -4,6 +4,7 @@
   "schedule": ["before 8am on monday"],
   "assignees": ["@Boshen"],
   "automerge": true,
+  "automergeType": "branch",
   "lockFileMaintenance": {
     "enabled": true
   },
@@ -28,6 +29,14 @@
       "groupName": "rust toolchain",
       "matchManagers": ["custom.regex"],
       "matchDepNames": ["rust"]
+    },
+    {
+      "groupName": "rust crates",
+      "matchManagers": ["cargo"]
+    },
+    {
+      "groupName": "npm packages",
+      "matchManagers": ["npm"]
     }
   ]
 }
