@@ -21,3 +21,7 @@ Add the `renovate/**` branch to your testing workflow files, or Renovate will no
 
 * https://docs.renovatebot.com/configuration-options/#automergetype
 * https://docs.renovatebot.com/key-concepts/automerge/#branch-vs-pr-automerging
+
+## Website
+
+[developer.mend.io](https://developer.mend.io)
