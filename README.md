@@ -5,13 +5,7 @@ Example:
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>Boshen/renovate"],
-  "packageRules": [
-    {
-      "groupName": "rust crates",
-      "matchManagers": ["cargo"]
-    }
-  ]
+  "extends": ["github>Boshen/renovate"]
 }
 ```
 
