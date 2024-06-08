@@ -4,6 +4,7 @@
   "schedule": ["before 10am on monday"],
   "automerge": true,
   "automergeType": "branch",
+  "rangeStrategy": "bump",
   "lockFileMaintenance": {
     "enabled": false
   },
