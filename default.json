@@ -40,6 +40,11 @@
       "matchManagers": ["npm"]
     },
     {
+      "groupName": "napi-rs",
+      "matchPackageNames": ["napi", "napi-build", "napi-derive"],
+      "rangeStrategy": "replace"
+    },
+    {
       "matchDatasources": ["node-version"],
       "matchDepNames": ["node"],
       "enabled": false
