@@ -38,6 +38,11 @@
     {
       "groupName": "npm packages",
       "matchManagers": ["npm"]
+    },
+    {
+      "matchDatasources": ["node-version"],
+      "matchDepNames": ["node"],
+      "enabled": false
     }
   ]
 }
