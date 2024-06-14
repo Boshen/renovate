@@ -30,7 +30,8 @@
       "groupName": "rust toolchain",
       "matchManagers": ["custom.regex"],
       "matchDepNames": ["rust"],
-      "schedule": ["at any time"]
+      "schedule": ["at any time"],
+      "automergeType": "pr"
     },
     {
       "groupName": "rust crates",
