@@ -4,7 +4,6 @@
   "schedule": ["before 10am on monday"],
   "automerge": true,
   "automergeType": "branch",
-  "rangeStrategy": "auto",
   "lockFileMaintenance": {
     "enabled": false
   },
@@ -24,7 +23,8 @@
   "packageRules": [
     {
       "groupName": "github-actions",
-      "matchManagers": ["github-actions"]
+      "matchManagers": ["github-actions"],
+      "rangeStrategy": "bump"
     },
     {
       "groupName": "rust toolchain",
@@ -35,11 +35,13 @@
     },
     {
       "groupName": "rust crates",
-      "matchManagers": ["cargo"]
+      "matchManagers": ["cargo"],
+      "rangeStrategy": "auto"
     },
     {
       "groupName": "npm packages",
-      "matchManagers": ["npm"]
+      "matchManagers": ["npm"],
+      "rangeStrategy": "auto"
     },
     {
       "groupName": "napi-rs",
