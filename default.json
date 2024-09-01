@@ -27,6 +27,13 @@
       "rangeStrategy": "bump"
     },
     {
+      "groupName": "typos",
+      "matchManagers": ["github-actions"],
+      "matchDepNames": ["crate-ci/typos"],
+      "schedule": ["at any time"],
+      "rangeStrategy": "bump"
+    },
+    {
       "groupName": "rust toolchain",
       "matchManagers": ["custom.regex"],
       "matchDepNames": ["rust"],
