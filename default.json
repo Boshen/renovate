@@ -53,7 +53,7 @@
     {
       "groupName": "napi-rs",
       "matchPackageNames": ["napi", "napi-build", "napi-derive"],
-      "rangeStrategy": "replace"
+      "enabled": false
     },
     {
       "matchDatasources": ["node-version"],
