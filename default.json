@@ -26,14 +26,14 @@
     {
       "groupName": "github-actions",
       "matchManagers": ["github-actions"],
-      "rangeStrategy": "bump"
+      "rangeStrategy": "auto"
     },
     {
       "groupName": "typos",
       "matchManagers": ["github-actions"],
       "matchDepNames": ["crate-ci/typos"],
       "schedule": ["at any time"],
-      "rangeStrategy": "bump"
+      "rangeStrategy": "auto"
     },
     {
       "groupName": "rust toolchain",
