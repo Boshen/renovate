@@ -1,10 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "Asia/Shanghai",
-  "schedule": ["before 11am on monday"],
+  "schedule": ["on monday"],
   "automerge": true,
   "automergeType": "branch",
-  "automergeSchedule": ["before 11am on monday"],
+  "automergeSchedule": ["on monday"],
   "updateNotScheduled": false,
   "lockFileMaintenance": {
     "enabled": false
