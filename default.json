@@ -7,7 +7,7 @@
   "automergeSchedule": ["on monday"],
   "updateNotScheduled": false,
   "lockFileMaintenance": {
-    "enabled": false
+    "enabled": true
   },
   "postUpdateOptions": ["pnpmDedupe"],
   "customManagers": [
