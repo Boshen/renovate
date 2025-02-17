@@ -3,11 +3,12 @@
   "timezone": "Asia/Shanghai",
   "schedule": ["on monday"],
   "automerge": true,
-  "automergeType": "branch",
+  "automergeType": "pr",
   "automergeSchedule": ["on monday"],
   "updateNotScheduled": false,
   "lockFileMaintenance": {
-    "enabled": true
+    "enabled": true,
+    "automerge": true
   },
   "postUpdateOptions": ["pnpmDedupe"],
   "customManagers": [
