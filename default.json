@@ -41,7 +41,8 @@
       "matchManagers": ["custom.regex"],
       "matchDepNames": ["rust"],
       "schedule": ["at any time"],
-      "automergeType": "pr"
+      "automergeType": "pr",
+      "automergeSchedule": ["at any time"]
     },
     {
       "groupName": "rust crates",
