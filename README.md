@@ -5,7 +5,7 @@ Example:
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>Boshen/renovate"]
+  "extends": ["github>Boshen/renovate", "helpers:pinGitHubActionDigestsToSemver"]
 }
 ```
 
