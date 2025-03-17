@@ -9,7 +9,9 @@
   "updateNotScheduled": false,
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true
+    "automerge": true,
+    "schedule": ["before 10pm on monday"],
+    "automergeSchedule": ["before 10pm on monday"]
   },
   "postUpdateOptions": ["pnpmDedupe"],
   "customManagers": [
