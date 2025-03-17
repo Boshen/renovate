@@ -27,7 +27,8 @@
     {
       "groupName": "github-actions",
       "matchManagers": ["github-actions"],
-      "rangeStrategy": "auto"
+      "rangeStrategy": "auto",
+      "automerge": false
     },
     {
       "groupName": "typos",

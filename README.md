@@ -13,6 +13,13 @@ Example:
 
 In GitHub Repo Settings - Enable "Allow auto-merge".
 
+## GitHub Actions Security
+
+`automerge` is disabled for GitHub Actions, due to its insecure natural. See:
+
+* [tj-actions/changed-files action is compromised](https://www.stepsecurity.io/blog/harden-runner-detection-tj-actions-changed-files-action-is-compromised)
+* [A supply chain attack on PyTorch](https://johnstawinski.com/2024/01/11/playing-with-fire-how-we-executed-a-critical-supply-chain-attack-on-pytorch)
+
 ## Website
 
 [developer.mend.io](https://developer.mend.io)
