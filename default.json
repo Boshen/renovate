@@ -2,16 +2,16 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["helpers:pinGitHubActionDigestsToSemver"],
   "timezone": "Asia/Shanghai",
-  "schedule": ["before 11am on monday"],
+  "schedule": ["before 8am on monday"],
   "automerge": true,
   "automergeType": "pr",
-  "automergeSchedule": ["before 11pm on monday"],
+  "automergeSchedule": ["at any time"],
   "updateNotScheduled": false,
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
-    "schedule": ["before 11am on monday"],
-    "automergeSchedule": ["before 11pm on monday"]
+    "schedule": ["before 8am on monday"],
+    "automergeSchedule": ["at any time"]
   },
   "postUpdateOptions": ["pnpmDedupe"],
   "customManagers": [
