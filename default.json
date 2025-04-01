@@ -9,8 +9,8 @@
   "updateNotScheduled": false,
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true,
     "schedule": ["before 8am on monday"],
+    "automerge": true,
     "automergeSchedule": ["at any time"]
   },
   "postUpdateOptions": ["pnpmDedupe"],
@@ -38,7 +38,9 @@
       "matchManagers": ["github-actions"],
       "matchDepNames": ["crate-ci/typos"],
       "schedule": ["at any time"],
-      "rangeStrategy": "auto"
+      "rangeStrategy": "auto",
+      "automerge": true,
+      "automergeSchedule": ["at any time"]
     },
     {
       "groupName": "rust toolchain",
