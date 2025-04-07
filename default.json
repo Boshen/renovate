@@ -9,7 +9,7 @@
   "updateNotScheduled": false,
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 8am on monday"],
+    "schedule": ["before 3am on tuesday"],
     "automerge": true,
     "automergeSchedule": ["at any time"]
   },
