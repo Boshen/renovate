@@ -11,7 +11,8 @@
     "enabled": true,
     "schedule": ["before 3am on tuesday"],
     "automerge": true,
-    "automergeSchedule": ["at any time"]
+    "automergeSchedule": ["at any time"],
+    "updateNotScheduled": true
   },
   "postUpdateOptions": ["pnpmDedupe"],
   "customManagers": [
