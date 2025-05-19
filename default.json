@@ -32,8 +32,25 @@
     {
       "groupName": "github-actions",
       "matchManagers": ["github-actions"],
+      "rangeStrategy": "auto"
+    },
+    {
+      "groupName": "rust crates",
+      "matchManagers": ["cargo"],
       "rangeStrategy": "auto",
-      "automerge": false
+      "ignoreDeps": ["napi", "napi-build", "napi-derive"]
+    },
+    {
+      "groupName": "npm packages",
+      "matchManagers": ["npm"],
+      "rangeStrategy": "auto",
+      "ignoreDeps": ["@napi-rs/cli"]
+    },
+    {
+      "groupName": "napi",
+      "matchManagers": ["cargo", "npm"],
+      "matchPackageNames": ["napi", "napi-build", "napi-derive", "@napi-rs/cli"],
+      "rangeStrategy": "auto"
     },
     {
       "groupName": "typos",
@@ -41,7 +58,6 @@
       "matchDepNames": ["crate-ci/typos"],
       "schedule": ["at any time"],
       "rangeStrategy": "auto",
-      "automerge": true,
       "automergeSchedule": ["at any time"]
     },
     {
@@ -51,21 +67,6 @@
       "schedule": ["at any time"],
       "automergeType": "pr",
       "automergeSchedule": ["at any time"]
-    },
-    {
-      "groupName": "rust crates",
-      "matchManagers": ["cargo"],
-      "rangeStrategy": "auto"
-    },
-    {
-      "groupName": "npm packages",
-      "matchManagers": ["npm"],
-      "rangeStrategy": "auto"
-    },
-    {
-      "groupName": "napi-rs",
-      "matchPackageNames": ["napi", "napi-build", "napi-derive"],
-      "enabled": false
     },
     {
       "matchDatasources": ["node-version"],
