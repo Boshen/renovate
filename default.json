@@ -50,7 +50,8 @@
       "groupName": "napi",
       "matchManagers": ["cargo", "npm"],
       "matchPackageNames": ["napi", "napi-build", "napi-derive", "@napi-rs/cli"],
-      "rangeStrategy": "auto"
+      "rangeStrategy": "auto",
+      "schedule": ["at any time"]
     },
     {
       "groupName": "typos",
