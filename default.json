@@ -47,6 +47,13 @@
       "ignoreDeps": ["@napi-rs/cli"]
     },
     {
+      "groupName": "oxc",
+      "matchManagers": ["cargo", "npm"],
+      "matchPackageNames": ["oxc", "oxc_parser_napi", "oxc_transform_napi", "oxc-parser", "oxc-transform", "@oxc-project/runtime", "@oxc-project/types"],
+      "rangeStrategy": "auto",
+      "schedule": ["at any time"]
+    },
+    {
       "groupName": "napi",
       "matchManagers": ["cargo", "npm"],
       "matchPackageNames": ["napi", "napi-build", "napi-derive", "@napi-rs/cli"],
