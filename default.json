@@ -49,6 +49,13 @@
       "schedule": ["at any time"]
     },
     {
+      "groupName": "rolldown",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["rolldown", "rolldown-vite"],
+      "rangeStrategy": "auto",
+      "schedule": ["at any time"]
+    },
+    {
       "groupName": "rust crates",
       "matchManagers": ["cargo"],
       "rangeStrategy": "auto",
@@ -57,8 +64,7 @@
     {
       "groupName": "npm packages",
       "matchManagers": ["npm"],
-      "rangeStrategy": "auto",
-      "ignoreDeps": ["@napi-rs/cli"]
+      "rangeStrategy": "auto"
     },
     {
       "groupName": "typos",
