@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["helpers:pinGitHubActionDigestsToSemver", "github>kachick/renovate-config-dprint"],
+  "extends": ["helpers:pinGitHubActionDigestsToSemver"],
   "timezone": "Asia/Shanghai",
   "schedule": ["before 9am on monday"],
   "automerge": true,
@@ -25,6 +25,26 @@
       ],
       "depNameTemplate": "rust",
       "packageNameTemplate": "rust-lang/rust",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
+      "matchStrings": [
+        "\"https://plugins\\.dprint\\.dev/(?<pluginName>[^/-]+)-(?<currentValue>[^/-]+?)\\.wasm\""
+      ],
+      "depNameTemplate": "dprint-{{pluginName}}",
+      "packageNameTemplate": "dprint/dprint-plugin-{{{pluginName}}}",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
+      "matchStrings": [
+        "\"https://plugins\\.dprint\\.dev/(?<user>g-plane)/(?<pluginName>[^/-]+)-(?<currentValue>[^/]+?)\\.wasm\""
+      ],
+      "depNameTemplate": "dprint-{{pluginName}}",
+      "packageNameTemplate": "{{{user}}}/{{{pluginName}}}",
       "datasourceTemplate": "github-releases"
     }
   ],
@@ -81,6 +101,11 @@
       "schedule": ["at any time"],
       "automergeType": "pr",
       "automergeSchedule": ["at any time"]
+    },
+    {
+      "groupName": "dprint plugins",
+      "customType": ["custom.regex"],
+      "matchDepNames": ["dprint-*"]
     },
     {
       "matchDatasources": ["node-version"],
