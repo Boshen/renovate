@@ -111,6 +111,13 @@
       "matchDatasources": ["node-version"],
       "matchDepNames": ["node"],
       "enabled": false
+    },
+    {
+      "matchDatasources": ["github-releases"],
+      "matchDepNames": ["node"],
+      "matchDepTypes": ["uses-with"],
+      "matchPackageNames": "actions/node-versions",
+      "enabled": false
     }
   ]
 }
