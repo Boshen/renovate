@@ -64,14 +64,14 @@
     {
       "groupName": "oxc",
       "matchManagers": ["cargo", "npm"],
-      "matchPackageNames": ["oxc", "oxc_parser_napi", "oxc_transform_napi", "oxc-parser", "oxc-transform", "@oxc-project/runtime", "@oxc-project/types"],
+      "matchPackageNames": ["oxc", "oxc_parser_napi", "oxc_transform_napi", "oxc-parser", "oxc-transform", "@oxc-project/runtime", "@oxc-project/types", "oxc_resolver", "oxc_resolver_napi"],
       "rangeStrategy": "auto",
       "schedule": ["at any time"]
     },
     {
       "groupName": "rolldown",
       "matchManagers": ["npm"],
-      "matchPackageNames": ["rolldown", "rolldown-vite"],
+      "matchPackageNames": ["rolldown", "rolldown-vite", "tsdown"],
       "rangeStrategy": "auto",
       "schedule": ["at any time"]
     },
