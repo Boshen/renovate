@@ -56,34 +56,34 @@
     },
     {
       "groupName": "napi",
-      "matchManagers": ["cargo", "npm"],
+      "matchDatasources": ["crate", "npm"],
       "matchPackageNames": ["napi", "napi-build", "napi-derive", "@napi-rs/cli"],
       "rangeStrategy": "auto",
       "schedule": ["at any time"]
     },
     {
       "groupName": "oxc",
-      "matchManagers": ["cargo", "npm"],
+      "matchDatasources": ["crate", "npm"],
       "matchPackageNames": ["oxc", "oxc_parser_napi", "oxc_transform_napi", "oxc-parser", "oxc-transform", "@oxc-project/runtime", "@oxc-project/types", "oxc_resolver", "oxc_resolver_napi"],
       "rangeStrategy": "auto",
       "schedule": ["at any time"]
     },
     {
       "groupName": "rolldown",
-      "matchManagers": ["npm"],
+      "matchDatasources": ["npm"],
       "matchPackageNames": ["rolldown", "rolldown-vite", "tsdown"],
       "rangeStrategy": "auto",
       "schedule": ["at any time"]
     },
     {
       "groupName": "rust crates",
-      "matchManagers": ["cargo"],
+      "matchDatasources": ["crate"],
       "rangeStrategy": "auto",
       "ignoreDeps": ["napi", "napi-build", "napi-derive"]
     },
     {
       "groupName": "npm packages",
-      "matchManagers": ["npm"],
+      "matchDatasources": ["npm"],
       "rangeStrategy": "auto"
     },
     {
