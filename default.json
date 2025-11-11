@@ -55,11 +55,43 @@
       "rangeStrategy": "auto"
     },
     {
+      "groupName": "typos",
+      "matchManagers": ["github-actions"],
+      "matchDepNames": ["crate-ci/typos"],
+      "schedule": ["at any time"],
+      "rangeStrategy": "auto",
+      "automergeSchedule": ["at any time"]
+    },
+    {
+      "matchDatasources": ["github-releases"],
+      "matchDepNames": ["node"],
+      "matchDepTypes": ["uses-with"],
+      "matchPackageNames": "actions/node-versions",
+      "enabled": false
+    },
+    {
+      "groupName": "npm packages",
+      "matchDatasources": ["npm"],
+      "rangeStrategy": "auto"
+    },
+    {
       "groupName": "napi",
       "matchDatasources": ["crate", "npm"],
       "matchPackageNames": ["napi", "napi-build", "napi-derive", "@napi-rs/cli"],
       "rangeStrategy": "auto",
       "schedule": ["at any time"]
+    },
+    {
+      "groupName": "rolldown",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["rolldown", "rolldown-vite", "tsdown"],
+      "rangeStrategy": "auto",
+      "schedule": ["at any time"]
+    },
+    {
+      "groupName": "rust crates",
+      "matchDatasources": ["crate"],
+      "rangeStrategy": "auto"
     },
     {
       "groupName": "oxc",
@@ -77,56 +109,6 @@
       "schedule": ["at any time"]
     },
     {
-      "groupName": "rolldown",
-      "matchDatasources": ["npm"],
-      "matchPackageNames": ["rolldown", "rolldown-vite", "tsdown"],
-      "rangeStrategy": "auto",
-      "schedule": ["at any time"]
-    },
-    {
-      "groupName": "rust crates",
-      "matchDatasources": ["crate"],
-      "rangeStrategy": "auto",
-      "ignoreDeps": [
-        "napi",
-        "napi-build",
-        "napi-derive",
-        "oxc",
-        "oxc_minify_napi",
-        "oxc_parser_napi",
-        "oxc_resolver",
-        "oxc_resolver_napi",
-        "oxc_transform_napi"
-      ]
-    },
-    {
-      "groupName": "npm packages",
-      "matchDatasources": ["npm"],
-      "rangeStrategy": "auto",
-      "ignoreDeps": [
-        "@napi-rs/cli",
-        "@oxc-project/runtime",
-        "@oxc-project/types",
-        "oxc-minify",
-        "oxc-parser",
-        "oxc-transform",
-        "oxfmt",
-        "oxlint",
-        "oxlint-tsgolint",
-        "rolldown",
-        "rolldown-vite",
-        "tsdown"
-      ]
-    },
-    {
-      "groupName": "typos",
-      "matchManagers": ["github-actions"],
-      "matchDepNames": ["crate-ci/typos"],
-      "schedule": ["at any time"],
-      "rangeStrategy": "auto",
-      "automergeSchedule": ["at any time"]
-    },
-    {
       "groupName": "rust toolchain",
       "matchManagers": ["custom.regex"],
       "matchDepNames": ["rust"],
@@ -142,13 +124,6 @@
     {
       "matchDatasources": ["node-version"],
       "matchDepNames": ["node"],
-      "enabled": false
-    },
-    {
-      "matchDatasources": ["github-releases"],
-      "matchDepNames": ["node"],
-      "matchDepTypes": ["uses-with"],
-      "matchPackageNames": "actions/node-versions",
       "enabled": false
     }
   ]
