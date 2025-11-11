@@ -65,18 +65,13 @@
       "groupName": "oxc",
       "matchDatasources": ["crate", "npm"],
       "matchPackageNames": [
-        "oxc",
-        "oxc_parser_napi",
-        "oxc_transform_napi",
-        "oxc-parser",
-        "oxc-transform",
         "@oxc-project/runtime",
-        "@oxc-project/types",
-        "oxc_resolver",
-        "oxc_resolver_napi",
+        "oxc",
+        "oxc-**",
+        "oxc_**",
+        "oxfmt",
         "oxlint",
-        "oxlint-tsgolint",
-        "oxfmt"
+        "oxlint-tsgolint"
       ],
       "rangeStrategy": "auto",
       "schedule": ["at any time"]
@@ -92,12 +87,36 @@
       "groupName": "rust crates",
       "matchDatasources": ["crate"],
       "rangeStrategy": "auto",
-      "ignoreDeps": ["napi", "napi-build", "napi-derive"]
+      "ignoreDeps": [
+        "napi",
+        "napi-build",
+        "napi-derive",
+        "oxc",
+        "oxc_minify_napi",
+        "oxc_parser_napi",
+        "oxc_resolver",
+        "oxc_resolver_napi",
+        "oxc_transform_napi"
+      ]
     },
     {
       "groupName": "npm packages",
       "matchDatasources": ["npm"],
-      "rangeStrategy": "auto"
+      "rangeStrategy": "auto",
+      "ignoreDeps": [
+        "@napi-rs/cli",
+        "@oxc-project/runtime",
+        "@oxc-project/types",
+        "oxc-minify",
+        "oxc-parser",
+        "oxc-transform",
+        "oxfmt",
+        "oxlint",
+        "oxlint-tsgolint",
+        "rolldown",
+        "rolldown-vite",
+        "tsdown"
+      ]
     },
     {
       "groupName": "typos",
