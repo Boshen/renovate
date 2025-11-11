@@ -75,11 +75,9 @@
       "rangeStrategy": "auto"
     },
     {
-      "groupName": "napi",
-      "matchDatasources": ["crate", "npm"],
-      "matchPackageNames": ["napi", "napi-build", "napi-derive", "@napi-rs/cli"],
-      "rangeStrategy": "auto",
-      "schedule": ["at any time"]
+      "groupName": "rust crates",
+      "matchDatasources": ["crate"],
+      "rangeStrategy": "auto"
     },
     {
       "groupName": "rolldown",
@@ -87,11 +85,6 @@
       "matchPackageNames": ["rolldown", "rolldown-vite", "tsdown"],
       "rangeStrategy": "auto",
       "schedule": ["at any time"]
-    },
-    {
-      "groupName": "rust crates",
-      "matchDatasources": ["crate"],
-      "rangeStrategy": "auto"
     },
     {
       "groupName": "oxc",
@@ -105,6 +98,13 @@
         "oxlint",
         "oxlint-tsgolint"
       ],
+      "rangeStrategy": "auto",
+      "schedule": ["at any time"]
+    },
+    {
+      "groupName": "napi",
+      "matchDatasources": ["crate", "npm"],
+      "matchPackageNames": ["napi", "napi-build", "napi-derive", "@napi-rs/cli"],
       "rangeStrategy": "auto",
       "schedule": ["at any time"]
     },
