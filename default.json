@@ -85,7 +85,8 @@
       "matchDatasources": ["npm"],
       "matchPackageNames": ["rolldown", "rolldown-vite", "tsdown"],
       "rangeStrategy": "auto",
-      "schedule": ["at any time"]
+      "schedule": ["at any time"],
+      "minimumReleaseAge": "0 days"
     },
     {
       "groupName": "oxc",
@@ -100,14 +101,16 @@
         "oxlint-tsgolint"
       ],
       "rangeStrategy": "auto",
-      "schedule": ["at any time"]
+      "schedule": ["at any time"],
+      "minimumReleaseAge": "0 days"
     },
     {
       "groupName": "napi",
       "matchDatasources": ["crate", "npm"],
       "matchPackageNames": ["napi", "napi-build", "napi-derive", "@napi-rs/cli"],
       "rangeStrategy": "auto",
-      "schedule": ["at any time"]
+      "schedule": ["at any time"],
+      "minimumReleaseAge": "0 days"
     },
     {
       "groupName": "rust toolchain",
