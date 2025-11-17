@@ -92,10 +92,19 @@
       "groupName": "oxc",
       "matchDatasources": ["crate", "npm"],
       "matchPackageNames": [
-        "@oxc-project/runtime",
+        "@oxc-project/*",
         "oxc",
         "oxc-**",
-        "oxc_**",
+        "oxc_**"
+      ],
+      "rangeStrategy": "auto",
+      "schedule": ["at any time"],
+      "minimumReleaseAge": "0 days"
+    },
+    {
+      "groupName": "oxc apps",
+      "matchDatasources": ["crate", "npm"],
+      "matchPackageNames": [
         "oxfmt",
         "oxlint",
         "oxlint-tsgolint"
