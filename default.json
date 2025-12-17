@@ -96,7 +96,9 @@
         "@oxc-project/*",
         "oxc",
         "oxc-**",
-        "oxc_**"
+        "oxc_**",
+        "sort-package-json",
+        "editorconfig-parser"
       ],
       "rangeStrategy": "auto",
       "schedule": ["at any time"],
