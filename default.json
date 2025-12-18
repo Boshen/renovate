@@ -105,6 +105,18 @@
       "minimumReleaseAge": "0 days"
     },
     {
+      "groupName": "oxc resolver",
+      "matchDatasources": ["crate", "npm"],
+      "matchPackageNames": [
+        "oxc-resolver",
+        "oxc_resolver",
+        "oxc_resolver_napi"
+      ],
+      "rangeStrategy": "auto",
+      "schedule": ["at any time"],
+      "minimumReleaseAge": "0 days"
+    },
+    {
       "groupName": "oxc apps",
       "matchDatasources": ["crate", "npm"],
       "matchPackageNames": [
