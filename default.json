@@ -82,6 +82,11 @@
       "rangeStrategy": "auto"
     },
     {
+      "matchDatasources": ["crate"],
+      "matchPackageNames": ["bincode"],
+      "allowedVersions": "<3.0.0"
+    },
+    {
       "groupName": "rolldown",
       "matchDatasources": ["npm"],
       "matchPackageNames": ["rolldown", "rolldown-vite", "tsdown"],
