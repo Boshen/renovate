@@ -77,6 +77,13 @@
       "minimumReleaseAge": "3 days"
     },
     {
+      "groupName": "pnpm package manager",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["packageManager"],
+      "matchDepNames": ["pnpm"],
+      "schedule": ["before 10am on the first day of the month"]
+    },
+    {
       "groupName": "rust crates",
       "matchDatasources": ["crate"],
       "rangeStrategy": "auto"
