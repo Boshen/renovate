@@ -1,25 +1,39 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["helpers:pinGitHubActionDigestsToSemver"],
+  "extends": [
+    "helpers:pinGitHubActionDigestsToSemver"
+  ],
   "timezone": "Asia/Shanghai",
-  "schedule": ["before 10am on monday"],
+  "schedule": [
+    "before 10am on monday"
+  ],
   "automerge": true,
   "automergeType": "pr",
-  "automergeSchedule": ["at any time"],
+  "automergeSchedule": [
+    "at any time"
+  ],
   "updateNotScheduled": false,
   "prHourlyLimit": 3,
   "lockFileMaintenance": {
     "enabled": false,
-    "schedule": ["before 9am on monday"],
+    "schedule": [
+      "before 9am on monday"
+    ],
     "automerge": true,
-    "automergeSchedule": ["at any time"],
+    "automergeSchedule": [
+      "at any time"
+    ],
     "updateNotScheduled": true
   },
-  "postUpdateOptions": ["pnpmDedupe"],
+  "postUpdateOptions": [
+    "pnpmDedupe"
+  ],
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^rust-toolchain\\.toml?$"],
+      "fileMatch": [
+        "^rust-toolchain\\.toml?$"
+      ],
       "matchStrings": [
         "channel\\s*=\\s*\"(?<currentValue>\\d+\\.\\d+(\\.\\d+)?)\""
       ],
@@ -29,7 +43,12 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
+      "fileMatch": [
+        "dprint.json",
+        "dprint.jsonc",
+        ".dprint.json",
+        ".dprint.jsonc"
+      ],
       "matchStrings": [
         "\"https://plugins\\.dprint\\.dev/(?<pluginName>[^/-]+)-(?<currentValue>[^/-]+?)\\.wasm\""
       ],
@@ -39,7 +58,12 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["dprint.json", "dprint.jsonc", ".dprint.json", ".dprint.jsonc"],
+      "fileMatch": [
+        "dprint.json",
+        "dprint.jsonc",
+        ".dprint.json",
+        ".dprint.jsonc"
+      ],
       "matchStrings": [
         "\"https://plugins\\.dprint\\.dev/(?<user>g-plane)/(?<pluginName>[^/-]+)-(?<currentValue>[^/]+?)\\.wasm\""
       ],
@@ -51,59 +75,118 @@
   "packageRules": [
     {
       "groupName": "github-actions",
-      "matchManagers": ["github-actions"],
+      "matchManagers": [
+        "github-actions"
+      ],
       "rangeStrategy": "auto"
     },
     {
       "groupName": "typos",
-      "matchManagers": ["github-actions"],
-      "matchDepNames": ["crate-ci/typos"],
-      "schedule": ["at any time"],
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchDepNames": [
+        "crate-ci/typos"
+      ],
+      "schedule": [
+        "at any time"
+      ],
       "rangeStrategy": "auto",
-      "automergeSchedule": ["at any time"]
+      "automergeSchedule": [
+        "at any time"
+      ]
     },
     {
-      "matchDatasources": ["github-releases"],
-      "matchDepNames": ["node"],
-      "matchDepTypes": ["uses-with"],
+      "matchDatasources": [
+        "github-releases"
+      ],
+      "matchDepNames": [
+        "node"
+      ],
+      "matchDepTypes": [
+        "uses-with"
+      ],
       "matchPackageNames": "actions/node-versions",
       "enabled": false
     },
     {
       "groupName": "npm packages",
-      "matchDatasources": ["npm"],
-      "ignoreDeps": ["@types/node"],
+      "matchDatasources": [
+        "npm"
+      ],
+      "ignoreDeps": [
+        "@types/node"
+      ],
       "rangeStrategy": "auto",
       "minimumReleaseAge": "3 days"
     },
     {
       "groupName": "pnpm package manager",
-      "matchManagers": ["npm"],
-      "matchDepTypes": ["packageManager"],
-      "matchDepNames": ["pnpm"],
-      "schedule": ["before 10am on the first day of the month"]
+      "matchManagers": [
+        "npm"
+      ],
+      "matchDepTypes": [
+        "packageManager"
+      ],
+      "matchDepNames": [
+        "pnpm"
+      ],
+      "schedule": [
+        "before 10am on the first day of the month"
+      ]
     },
     {
       "groupName": "rust crates",
-      "matchDatasources": ["crate"],
+      "matchDatasources": [
+        "crate"
+      ],
       "rangeStrategy": "auto"
     },
     {
-      "matchDatasources": ["crate"],
-      "matchPackageNames": ["bincode"],
+      "matchDatasources": [
+        "crate"
+      ],
+      "matchPackageNames": [
+        "bincode"
+      ],
       "allowedVersions": "<3.0.0"
     },
     {
-      "groupName": "rolldown",
-      "matchDatasources": ["npm"],
-      "matchPackageNames": ["rolldown", "rolldown-vite", "tsdown"],
+      "groupName": "vite+",
+      "matchDatasources": [
+        "npm"
+      ],
+      "matchPackageNames": [
+        "vite-plus"
+      ],
       "rangeStrategy": "auto",
-      "schedule": ["at any time"],
+      "schedule": [
+        "at any time"
+      ],
+      "minimumReleaseAge": "0 days"
+    },
+    {
+      "groupName": "rolldown",
+      "matchDatasources": [
+        "npm"
+      ],
+      "matchPackageNames": [
+        "rolldown",
+        "rolldown-vite",
+        "tsdown"
+      ],
+      "rangeStrategy": "auto",
+      "schedule": [
+        "at any time"
+      ],
       "minimumReleaseAge": "0 days"
     },
     {
       "groupName": "oxc",
-      "matchDatasources": ["crate", "npm"],
+      "matchDatasources": [
+        "crate",
+        "npm"
+      ],
       "matchPackageNames": [
         "@oxc-project/*",
         "oxc",
@@ -113,57 +196,95 @@
         "editorconfig-parser"
       ],
       "rangeStrategy": "auto",
-      "schedule": ["at any time"],
+      "schedule": [
+        "at any time"
+      ],
       "minimumReleaseAge": "0 days"
     },
     {
       "groupName": "oxc resolver",
-      "matchDatasources": ["crate", "npm"],
+      "matchDatasources": [
+        "crate",
+        "npm"
+      ],
       "matchPackageNames": [
         "oxc-resolver",
         "oxc_resolver",
         "oxc_resolver_napi"
       ],
       "rangeStrategy": "auto",
-      "schedule": ["at any time"],
+      "schedule": [
+        "at any time"
+      ],
       "minimumReleaseAge": "0 days"
     },
     {
       "groupName": "oxc apps",
-      "matchDatasources": ["crate", "npm"],
+      "matchDatasources": [
+        "crate",
+        "npm"
+      ],
       "matchPackageNames": [
         "oxfmt",
         "oxlint",
         "oxlint-tsgolint"
       ],
       "rangeStrategy": "auto",
-      "schedule": ["at any time"],
+      "schedule": [
+        "at any time"
+      ],
       "minimumReleaseAge": "0 days"
     },
     {
       "groupName": "napi",
-      "matchDatasources": ["crate", "npm"],
-      "matchPackageNames": ["napi", "napi-build", "napi-derive", "@napi-rs/cli"],
+      "matchDatasources": [
+        "crate",
+        "npm"
+      ],
+      "matchPackageNames": [
+        "napi",
+        "napi-build",
+        "napi-derive",
+        "@napi-rs/cli"
+      ],
       "rangeStrategy": "auto",
-      "schedule": ["at any time"],
+      "schedule": [
+        "at any time"
+      ],
       "minimumReleaseAge": "0 days"
     },
     {
       "groupName": "rust toolchain",
-      "matchManagers": ["custom.regex"],
-      "matchDepNames": ["rust"],
-      "schedule": ["at any time"],
+      "matchManagers": [
+        "custom.regex"
+      ],
+      "matchDepNames": [
+        "rust"
+      ],
+      "schedule": [
+        "at any time"
+      ],
       "automergeType": "pr",
-      "automergeSchedule": ["at any time"]
+      "automergeSchedule": [
+        "at any time"
+      ]
     },
     {
       "groupName": "dprint plugins",
-      "customType": ["custom.regex"],
-      "matchDepNames": ["dprint-*"]
+      "customType": [
+        "custom.regex"
+      ],
+      "matchDepNames": [
+        "dprint-*"
+      ]
     },
     {
-      "matchDatasources": ["node-version"],
-      "matchDepNames": ["node"],
+      "matchDatasources": [
+        "node-version"
+      ],
+      "matchDepNames": [
+        "node"
+      ],
       "enabled": false
     }
   ]
