@@ -199,7 +199,7 @@
       "schedule": [
         "at any time"
       ],
-      "minimumReleaseAge": "0 days"
+      "minimumReleaseAge": "1 hour"
     },
     {
       "groupName": "oxc resolver",
