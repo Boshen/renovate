@@ -74,11 +74,12 @@
   ],
   "packageRules": [
     {
-      "groupName": "github-actions",
+      "groupName": "github actions",
       "matchManagers": [
         "github-actions"
       ],
-      "rangeStrategy": "auto"
+      "rangeStrategy": "auto",
+      "minimumReleaseAge": "3 days"
     },
     {
       "groupName": "typos",
