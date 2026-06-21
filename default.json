@@ -189,13 +189,33 @@
         "npm"
       ],
       "matchPackageNames": [
-        "@oxc-project/*",
         "oxc",
-        "oxc-**",
-        "oxc_**",
+        "oxc_*",
+        "@oxc-project/*",
+        "oxc-parser",
+        "oxc-transform",
+        "oxc-minify"
+      ],
+      "rangeStrategy": "auto",
+      "schedule": [
+        "at any time"
+      ],
+      "minimumReleaseAge": "1 hour"
+    },
+    {
+      "matchDatasources": [
+        "crate",
+        "npm"
+      ],
+      "matchPackageNames": [
+        "oxc_index",
+        "oxc_sourcemap",
+        "oxc-miette",
+        "oxc-browserslist",
         "sort-package-json",
         "editorconfig-parser"
       ],
+      "groupName": null,
       "rangeStrategy": "auto",
       "schedule": [
         "at any time"
