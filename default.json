@@ -158,7 +158,8 @@
         "npm"
       ],
       "matchPackageNames": [
-        "vite-plus"
+        "vite-plus",
+        "@voidzero-dev/vite-plus-*"
       ],
       "rangeStrategy": "auto",
       "schedule": [
