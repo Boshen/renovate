@@ -13,6 +13,7 @@
     "at any time"
   ],
   "updateNotScheduled": false,
+  "updatePinnedDependencies": false,
   "prHourlyLimit": 3,
   "lockFileMaintenance": {
     "enabled": false,
