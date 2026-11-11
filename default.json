@@ -155,6 +155,7 @@
     },
     {
       "groupName": "vite+",
+      "groupSlug": "vite-plus",
       "matchDatasources": [
         "npm"
       ],
