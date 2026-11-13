@@ -285,6 +285,7 @@
       "matchDepNames": [
         "rust"
       ],
+      "updatePinnedDependencies": true,
       "schedule": [
         "at any time"
       ],
