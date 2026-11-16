@@ -163,6 +163,7 @@
         "vite-plus",
         "@voidzero-dev/vite-plus-*"
       ],
+      "updatePinnedDependencies": true,
       "rangeStrategy": "auto",
       "schedule": [
         "at any time"
